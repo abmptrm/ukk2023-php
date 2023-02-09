@@ -22,14 +22,56 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="assets/index2.html" class="h1 font-weight-bold">Login <br><span style="font-size: 20px;">Masyarakat</span></a>
+                <h1 href="login.php" class="h1 font-weight-bold">Login <br><span style="font-size: 20px;">Masyarakat</span></h1>
             </div>
             <div class="card-body">
                 <p class="login-box-msg" style="font-size: 18px;">Aplikasi Pengaduan Masyarakat</p>
 
-                <form action="assets/index3.html" method="post">
+                <?php 
+                    if(isset($_GET['info'])){
+                    if($_GET['info'] == "gagal"){ ?>
+                        <div class="col-md-12">
+                            <div class="card bg-gradient-danger">
+                                
+                                <div class="card-body text-center">
+                                    Login Gagal! <br>
+                                    Username & password salah!
+                                </div>
+                         
+                            </div>
+                        
+                        </div>
+                    <?php } else if($_GET['info'] == "logout"){ ?>
+                        <div class="col-md-12">
+                            <div class="card bg-gradient-success">
+                                <!-- /.card-header -->
+                                <div class="card-body text-center">
+                                Anda telah berhasil logout
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+
+                        
+                    <?php }else if($_GET['info'] == "login"){ ?>
+                        <div class="col-md-12">
+                            <div class="card bg-gradient-info">
+                                <!-- /.card-header -->
+                                <div class="card-body text-center">
+                                    Maaf anda harus login terlebih dahulu
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    <?php } } ?>
+
+                    <br>
+
+                <form action="php/cek_login.php" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" placeholder="Username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -37,7 +79,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3 ">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Password" id="myPass">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -47,10 +89,11 @@
                     <div class="row mt-4">
                         <div class="col-8">
                             <div class="icheck-primary">
-                                <input type="checkbox" id="remember">
+                                <input type="checkbox" id="remember" onclick="showPass()">
                                 <label for="remember" style="font-size: 14px;">
                                     Tampilkan Password
                                 </label>
+                                
                             </div>
                         </div>
                         <!-- /.col -->
@@ -83,6 +126,8 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="assets/dist/js/adminlte.min.js"></script>
+    
+    <script src="js/showPass.js"></script>
 </body>
 
 </html>
