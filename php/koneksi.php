@@ -4,7 +4,6 @@
         echo "<h1 style='color:red;'>Error connecting :  " . mysqli_connect_error() . "</h1>";
     } else  {  echo "<h1 style='color:lime;'>Connected</h1>"; }
 
-
 ?>
 
 

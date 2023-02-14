@@ -44,7 +44,7 @@
                     <?php } else if($_GET['info'] == "logout"){ ?>
                         <div class="col-md-12">
                             <div class="card bg-gradient-success">
-                                <!-- /.card-header -->
+                                <!-- /.card-header -->  
                                 <div class="card-body text-center">
                                 Anda telah berhasil logout
                                 </div>
@@ -69,7 +69,7 @@
 
                     <br>
 
-                <form action="php/cek_login/cek_masyarakat.php" method="post">
+                <form action="php/cek_login/cek_petugas.php" method="post">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Username">
                         <div class="input-group-append">
@@ -104,14 +104,14 @@
                     </div>
                 </form>
 
-                <p class="mb-lg-4 mt-lg-4 text-center">
+                <!-- <p class="mb-lg-4 mt-lg-4 text-center">
                     Sudah punya akun? <a href="daftar.html">Buat akun.</a>
-                </p>
+                </p> -->
 
-                <hr>
+                <hr class="mt-3">
 
                 <p class="mb-0 mt-3 text-center">
-                    Login sebagai <a href="login-petugas.html" class="text-center">Admin/Petugas.</a>
+                    Login sebagai <a href="login.php" class="text-center">Masyarakat.</a>
                 </p>
             </div>
             <!-- /.card-body -->
