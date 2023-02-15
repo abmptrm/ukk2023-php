@@ -71,7 +71,7 @@
 
                 <form action="php/cek_login/cek_petugas.php" method="post">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" placeholder="Username" name="username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3 ">
-                        <input type="password" class="form-control" placeholder="Password" id="myPass">
+                        <input type="password" class="form-control" placeholder="Password" id="myPass" name="password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -98,7 +98,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block rounded-pill">Masuk</button>
+                            <button type="submit" class="btn btn-primary btn-block rounded-pill" name="masuk-petugas">Masuk</button>
                         </div>
                         <!-- /.col -->
                     </div>
